@@ -1,13 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>RESTO SAFIA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+     <?php
+   require 'function.php';
+   $mahasiswa = query("SELECT * FROM menu");
+     ?>
+<div class="container">
+    <h2>Daftar Menu</h2>
+
+    <a href="tambah.php" class="btn btn-tambah">+ Tambah Menu</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>no</th>
+                <th>nama makanan</th>
+                <th>harga</th>
+                <th>porsi</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+              $no =1;
+              foreach($mahasiswa as $mhs):
+             
+            ?>
+            
+</body>
 </html>
